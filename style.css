@@ -1,0 +1,240 @@
+/*
+    The is a project design
+    Name:Adonias kidane
+    Date:12/31/2019
+
+*/
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+#container-big{
+    display:flex;
+    flex-direction: column;
+    /*background-image:linear-gradient( to right,pink ,rgb(145, 145, 255));*/
+    background-image: linear-gradient(to right,#42275a ,#734b6d);
+    /*background-image: url("pexels-3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    height:300vh;
+}
+/*The is the header css*/
+.header{
+    border-bottom:2px solid white;
+    border-radius: 50%;
+    height:35vh;
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1rem;
+}
+.logo{
+    align-self: center;
+    text-align: center;
+}
+.logo>img{
+    height:100px;
+    width:100px
+}
+.button{
+    align-self: center;
+    text-align:center;
+}
+.button>button{
+    margin:0.5rem;
+    padding:0.3rem;
+    width: 150px;
+
+    background-color: rgba(42, 28, 49, 0.548);
+    color:white;
+    border:1px solid white;
+    border-radius: 5px;
+}
+.reg{
+    align-self: center;
+    text-align: center;
+}
+.reg>button{
+    padding: 0.3rem;
+    width:150px;
+
+    
+    background-color: rgba(42, 28, 49, 0.548);
+    color:white;
+    border:1px solid white;
+    border-radius: 5px;
+}
+
+
+
+/*This is the section css including the section subgroups*/
+.section{
+    display:flex;
+    height:115vh;
+    justify-content:space-around;
+    align-items:center;
+}
+.section-A,.section-B,.section-C{
+    background-color: rgba(255, 165, 92, 0.5);
+	width:25%;
+	/*border-radius:50%;*/
+	display:flex;
+	flex-direction:column;
+    justify-content:space-around;
+    height: 60vh;
+    border-radius: 20%;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.section-B{
+    width:45%;
+    height: 90vh;
+    border-radius: 50%;
+}
+.login, .register,.other{
+	background:rgba(200, 133, 255,0.5);
+	height:55vh;
+	margin:0 5%;
+	display:flex;
+	flex-direction:column;
+    justify-content:space-around;
+    border-radius: 20%;
+
+}
+.login{
+    height: 80vh;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.login h1{
+    text-align: center;
+    font-size: 25px;
+
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    line-height: 2rem;
+}
+.login form input{
+    width:100%;
+    padding:5px;
+    margin:4px;
+}
+  
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .btn:hover{
+      background-color: rgba(255, 101, 178, 0.363);
+      transition:background 0.4s ease-in;
+  }
+ .login form #msg{
+      color:red;
+      
+  }
+/*This is section-2 part*/
+.section-2{
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:1rem;
+    margin: 16px;
+}
+.section-2>div{
+    background: rgba(231, 255, 96, 0.281);
+}
+.section-2>div:nth-child(even){
+    background: rgba(132, 255, 218, 0.295);
+}
+.box1{
+    
+}
+.box2{
+    grid-column: 2/4;
+}
+.box4{
+    grid-row: 2/4;
+}
+.box5{
+    grid-row:2/4;
+}
+
+/*This is the footer css*/
+.footer{
+    border-top:2px solid white;
+    border-radius: 50%;
+    height:50vh;
+}
+
+
+/*--------------------Media query----------------------*/
+
+@media(max-width:900px){
+    
+    #container-big{
+        height: 425vh;
+    }
+
+
+
+    /*header section*/
+    .header{
+        height:60vh ;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0.2rem;
+    }
+    .logo{
+        align-self: center;
+        text-align: center;
+    }
+    .button{
+        align-self: center;
+        text-align:center;
+        grid-row: 1/2;
+    }
+    .reg{
+        align-self: center;
+        text-align: center;
+    }
+
+    .section{
+        display:flex;
+        flex-direction: column;
+        height:225vh;
+    }
+    .section-A,.section-B,.section-C
+    {
+        width:90%;
+    }
+
+
+    /* section 2*/
+    .section-2{
+        /*
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        overflow:scroll;*/
+        display: none;
+
+    }
+    .section-2>div{
+        height:200px;
+    }
+}
